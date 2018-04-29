@@ -73,3 +73,47 @@ C:\VS Projects\manageDrugs\DrugStore\bin\zh-CHS\Microsoft.Build.Engine.resources
 C:\VS Projects\manageDrugs\DrugStore\bin\zh-CHT\Microsoft.Build.Engine.resources.dll
 C:\VS Projects\manageDrugs\DrugStore\bin\System.Web.Providers.dll
 C:\VS Projects\manageDrugs\DrugStore\bin\System.Web.Providers.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.dll.config
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Antlr3.Runtime.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.DAL.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.Model.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.SqlServer.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Newtonsoft.Json.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\PagedList.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\PagedList.Mvc.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Helpers.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Mvc.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Optimization.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Providers.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\WebGrease.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.Model.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.DAL.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Antlr3.Runtime.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.SqlServer.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Newtonsoft.Json.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\PagedList.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\PagedList.Mvc.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Helpers.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Mvc.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Providers.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.Optimization.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\obj\Debug\DrugStore.csprojResolveAssemblyReference.cache
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\obj\Debug\DrugStore.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\obj\Debug\DrugStore.pdb

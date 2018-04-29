@@ -60,3 +60,34 @@ C:\VS Projects\manageDrugs\DrugStore.DAL\bin\ko\Microsoft.Build.Engine.resources
 C:\VS Projects\manageDrugs\DrugStore.DAL\bin\ru\Microsoft.Build.Engine.resources.dll
 C:\VS Projects\manageDrugs\DrugStore.DAL\bin\zh-CHS\Microsoft.Build.Engine.resources.dll
 C:\VS Projects\manageDrugs\DrugStore.DAL\bin\zh-CHT\Microsoft.Build.Engine.resources.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\DrugStore.DAL.dll.config
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\DrugStore.DAL.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\DrugStore.DAL.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\DrugStore.Model.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\EntityFramework.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\EntityFramework.SqlServer.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\Microsoft.Web.XmlTransform.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\Newtonsoft.Json.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\NuGet.Core.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Helpers.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Mvc.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\DrugStore.Model.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\EntityFramework.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\EntityFramework.SqlServer.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\Newtonsoft.Json.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Helpers.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Mvc.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\obj\Debug\DrugStore.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\obj\Debug\DrugStore.DAL.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore.DAL\obj\Debug\DrugStore.DAL.pdb

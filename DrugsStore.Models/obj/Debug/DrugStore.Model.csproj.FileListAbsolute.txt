@@ -33,3 +33,38 @@ C:\VS Projects\manageDrugs\DrugsStore.Models\obj\Debug\DrugStore.Model.csprojRes
 C:\VS Projects\manageDrugs\DrugsStore.Models\obj\Debug\DrugStore.Model.Migrations.initial.resources
 C:\VS Projects\manageDrugs\DrugsStore.Models\obj\Debug\DrugStore.Model.csproj.GenerateResource.Cache
 C:\VS Projects\manageDrugs\DrugsStore.Models\obj\Debug\DrugStore.Model.Migrations.nonrequiredfields.resources
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\DrugStore.Model.dll.config
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\DrugStore.Model.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\DrugStore.Model.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\EntityFramework.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\EntityFramework.SqlServer.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\Microsoft.Web.XmlTransform.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\Newtonsoft.Json.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\NuGet.Core.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\nunit.framework.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Helpers.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Mvc.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.Razor.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\EntityFramework.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\EntityFramework.SqlServer.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\Newtonsoft.Json.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\nunit.framework.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\nunit.framework.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Helpers.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Mvc.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\bin\System.Web.WebPages.Razor.xml
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.csprojResolveAssemblyReference.cache
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.Migrations.initial.resources
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.Migrations.nonrequiredfields.resources
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.csproj.GenerateResource.Cache
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.dll
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugsStore.Models\obj\Debug\DrugStore.Model.pdb
