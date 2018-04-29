@@ -1,0 +1,14 @@
+﻿@model DrugStore.ViewModels.AlertVM
+
+<div class="modal-body">
+    <div class="row">
+        &nbsp;
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            @Html.LabelFor(a => a.Message, new { @class = "content-label" })
+            <br />
+            @Html.ActionLink("Home", "Index", null, new { @class = "btn btn-success btn-unified" })
+        </div>
+    </div>
+</div>

@@ -1,0 +1,367 @@
+﻿@model DrugStore.ViewModels.UserVM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var userRole = ViewBag.UserRole;
+}
+<h2>Details - User</h2>
+
+@Html.HiddenFor( model => model.ID )
+@Html.HiddenFor( mode => Model.CreatedBy )
+@Html.HiddenFor( mode => Model.CreatedDate )
+@Html.HiddenFor( mode => Model.UpdatedBy )
+@Html.HiddenFor( mode => Model.UpdatedDate )
+
+<div class="container">
+    <div class="form-group">
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                @Html.ValidationSummary( false , "" , new { @class = "text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.UserName , "اسم المستخدم" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.UserName , "User Name" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-wrench"></i></span>
+                    @Html.TextBoxFor( a => a.UserName , new { @class = "form-control" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.UserName , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.Password , "كلمة السر" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.Password , "Password" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i style="color: #3b5997" class="fa fa-lock"></i>
+                    </span>
+                    @Html.TextBoxFor( a => a.Password ,
+                                     new
+                                     {
+                                         @class = "form-control" ,
+                                         style = "display: inline-block" ,
+                                         id = "txtPassword" ,
+                                         type = "password" ,
+                                         name = "password" ,
+                                         @readonly = "readonly"
+                                     } )
+                    <span style="color: #3b5997; display: inline-block" class="glyphicon glyphicon-eye-close glyph">
+                    </span>
+                    @Html.ValidationMessageFor( a => a.Password , "" , new { @class = "text-danger" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.ConfirmPassword , "تاكيد كلمة السر" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.ConfirmPassword , "Confirm Password" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon">
+                        <i style="color: #3b5997" class="fa fa-lock"></i>
+                    </span>
+                    @Html.TextBoxFor( a => a.ConfirmPassword ,
+                             new
+                             {
+                                 @class = "form-control" ,
+                                 id = "txtConfirmPassword" ,
+                                 type = "password" ,
+                                 name = "password" ,
+                                 @readonly = "readonly"
+                             } )
+                </div>
+                @Html.ValidationMessageFor( a => a.ConfirmPassword , null ,
+                         new { @class = "text-danger" , id = "ErrConfirmPassword" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.IsActive , "حساب نشط" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.IsActive , "Is Active" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-check"></i>
+                    </span>
+                    <div class="checkbox" style="padding-left:35px;">
+                        @Html.CheckBoxFor( model => model.IsActive ,
+                                 new { id = "chkActive" , @class = "checkbox" , onclick = "return false;" } )
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.FirstName , "الاسم الاول" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.FirstName , "First Name" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                    @Html.TextBoxFor( a => a.FirstName , new { @class = "form-control" , maxlength = "25" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.FirstName , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.MiddleName , "الاسم الاوسط" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.MiddleName , "Middle Name" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                    @Html.TextBoxFor( a => a.MiddleName ,
+                             new { @class = "form-control" , maxlength = "25" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.MiddleName , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.LastName , "الاسم الاخير" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.LastName , "Last Name" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                    @Html.TextBoxFor( a => a.LastName ,
+                             new { @class = "form-control" , maxlength = "25" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.LastName , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.Email , "ألايميل" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.Email , "Email" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-envelope"></i></span>
+                    @Html.TextBoxFor( a => a.Email ,
+                             new { @class = "form-control" , placeholder = "user@company.com" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.Email , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.Phone , "تليفون" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.Phone , "Phone" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-phone"></i></span>
+                    @Html.TextBoxFor( a => a.Phone ,
+                             new { @class = "form-control" , id = "txtPhone" , maxlength = "25" , @readonly = "readonly" } )
+                </div>
+                @Html.ValidationMessageFor( a => a.Phone , null , new { @class = "control-label text-danger" } )
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.UserRole , "مستوي الحساب" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.UserRole , "User Role" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="input-group" style="cursor: not-allowed;">
+                    <span class="input-group-addon">
+                        <i style="color: #3b5997" class="fa fa-cog"></i>
+                    </span>
+                    @Html.DropDownListFor( m => m.SelectedUserRoleID , Model.UserRoles ,
+                             "--Select Role--" ,
+                             new { @class = "form-control" , style = "pointer-events: none; background-color: #eeeeee;" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.CreatedDate , "تاريخ الانشاء" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.CreatedDate , "Created Date" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor( model => model.CreatedDate ,
+                                 new { @class = "form-control" , @readonly = "readonly" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.CreatedBy , "انشئت بواسطة" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.CreatedBy , "Created By" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor( model => model.CreatedBy ,
+                                 new { @class = "form-control" , @readonly = "readonly" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.UpdatedDate , "تاريخ التحديث" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.UpdatedDate , "Updated Date" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor( model => model.UpdatedDate ,
+                                 new { @class = "form-control" , @readonly = "readonly" } )
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor( model => model.UpdatedBy , "حدثت بواسطة" , new { @class = "control-label" } )
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor( model => model.UpdatedBy , "Updated By" , new { @class = "control-label" } )
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor( model => model.UpdatedBy ,
+                                 new { @class = "form-control" , @readonly = "readonly" } )
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="row row-striped">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+                @Html.ActionLink( "Index" , "Index" , null , new { @class = "btn btn-danger btn-unified" } )
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                @Html.ActionLink( "Edit" , "Edit" , new { id = Model.ID } , new { @class = "btn btn-primary btn-unified" } )
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        registerObj.validatePassword();
+        registerObj.togglePassword();
+        registerObj.validatePhone("txtPhone");
+    });
+</script>

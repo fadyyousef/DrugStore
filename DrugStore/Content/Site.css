@@ -1,0 +1,152 @@
+﻿html {
+    min-height: 100%;
+    height: 100vh;
+}
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists
+   will truncate terms that are too long to fit in the left column
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.navbar {
+    background-color: #3b5997;
+    background-image: none;
+    border-bottom: 1px solid white;
+    box-shadow: 0 5px 15px rgba(136, 136, 136, 0.33);
+}
+
+.navbar-inverse .navbar-text {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover,
+    .navbar-inverse .navbar-nav > li > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+    .navbar-inverse .navbar-brand:hover,
+    .navbar-inverse .navbar-brand:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #3b5997;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(136, 136, 136, 0.33);
+}
+
+.navbar-inverse .navbar-nav > .dropdown > a .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .open > a .caret,
+.navbar-inverse .navbar-nav > .open > a:hover .caret,
+.navbar-inverse .navbar-nav > .open > a:focus .caret {
+    border-top-color: #ccc;
+    border-bottom-color: #ccc;
+}
+
+.container {
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1198px;
+}
+
+.content {
+    height: 450px;
+    background-color: #efefef;
+}
+
+.fill {
+    position: relative;
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%);
+}
+
+.row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.row-striped:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+.row-striped:nth-of-type(even) {
+    background-color: #efefef;
+}
+
+#txtPassword + .glyphicon {
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.glyph {
+    position: absolute;
+    top: 10px;
+    display: inline-block;
+    left: 255px;
+}
+
+.input-group > .form-control {
+    width: 241px;
+    max-width: 241px;
+}
+
+.panelLink {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.panel-title > a {
+    text-decoration: none;
+}
+
+.btn-unified {
+    width: 90px;
+    min-width: 90px;
+    max-width: 100%;
+}
+

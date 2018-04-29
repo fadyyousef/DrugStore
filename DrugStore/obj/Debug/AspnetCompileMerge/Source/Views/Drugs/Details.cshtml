@@ -1,0 +1,349 @@
+﻿@model DrugStore.ViewModels.DrugVM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Details - Drug</h2>
+@Html.HiddenFor(model => model.ID)
+
+<div class="container">
+    <div class="form-group">
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.CompanyID, "الشركة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.CompanyID, "Company", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group" style="cursor: not-allowed;">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-cogs"></i>
+                    </span>
+                    @Html.DropDownListFor(m => m.CompanyID, Model.DrugCompanies,
+                                 "--Select Company--",
+                                 new { @class = "form-control", style = "pointer-events: none; background-color: #eeeeee;" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.CategoryID, "التصنيف", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.CategoryID, "Category", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group" style="cursor: not-allowed;">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-cogs"></i>
+                    </span>
+                    @Html.DropDownListFor(m => m.CategoryID, Model.DrugCategories,
+                                 "--Select Company--",
+                                 new { @class = "form-control", style = "pointer-events: none; background-color: #eeeeee;" })
+
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.FormID, "نوع العبوة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.FormID, "Form", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group" style="cursor: not-allowed;">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-cogs"></i>
+                    </span>
+                    @Html.DropDownListFor(m => m.FormID, Model.DrugForms,
+                                 "--Select Form--",
+                                 new { @class = "form-control", style = "pointer-events: none; background-color: #eeeeee;" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.Name, "اسم الدواء", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.Name, "Name", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-flask"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.Name,
+                            new { @class = "form-control", @readonly = "readonly" })
+
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.MarketName, "الاسم التجاري", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.MarketName, "Market Name", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-snowflake"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.MarketName, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.ActiveIngredients, "المادة الفعالة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.ActiveIngredients, "Active Ingridients", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-user-md"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.ActiveIngredients,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.DoseAmount, "الجرعة المحددة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.DoseAmount, "Dose Amount", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-heartbeat"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.DoseAmount,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.Price, "السعر", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.Price, "Price", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-money-bill-alt"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.Price,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.AvailableAmount, "المتاح", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.AvailableAmount, "Available Amount",
+                                     new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-shopping-cart"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.AvailableAmount,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.ProductionDate, "تاريخ الانتاج", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.ProductionDate, "Production Date", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.ProductionDate,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.ExpiryDate, "تاريخ الانتهاء", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.ExpiryDate, "Expiry Date", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.ExpiryDate,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.CreatedDate, "تاريخ الانشاء", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.CreatedDate, "Created Date", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.CreatedDate,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.CreatedBy, "انشئت بواسطة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.CreatedBy, "Created By", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.CreatedBy,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.UpdatedDate, "تاريخ التحديث", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.UpdatedDate, "Updated Date", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.UpdatedDate,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                        @Html.LabelFor(model => model.UpdatedBy, "حدثت بواسطة", new { @class = "control-label" })
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        @Html.LabelFor(model => model.UpdatedBy, "Updated By", new { @class = "control-label" })
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.UpdatedBy,
+                                 new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.ActionLink("Index", "Index", null, new { @class = "btn btn-danger btn-unified" })
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary btn-unified" })
+            </div>
+        </div>
+    </div>
+</div>

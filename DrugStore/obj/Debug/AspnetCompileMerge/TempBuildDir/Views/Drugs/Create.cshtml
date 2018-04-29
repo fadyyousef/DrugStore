@@ -1,0 +1,281 @@
+﻿@model DrugStore.ViewModels.DrugVM
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create - Drug</h2>
+@using (Html.BeginForm("Create", "Drugs", FormMethod.Post, htmlAttributes: new { autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.CompanyID, "الشركة", htmlAttributes: new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.CompanyID, "Company", htmlAttributes: new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-cogs"></i>
+                        </span>
+                        @Html.DropDownListFor(m => m.CompanyID, Model.DrugCompanies,
+                                                "--Select Company--", new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.CompanyID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.CategoryID, "التصنيف", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.CategoryID, "Category", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-cogs"></i>
+                        </span>
+                        @Html.DropDownListFor(m => m.CategoryID, Model.DrugCategories,
+                                                "--Select Category--", new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.FormID, "النوع", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.CategoryID, "Form", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-cogs"></i>
+                        </span>
+                        @Html.DropDownListFor(m => m.FormID, Model.DrugForms,
+                                                "--Select Form--", new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.FormID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.Name, "اسم الدواء", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.Name, "Name", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-flask"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.MarketName, "الاسم التجاري", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.MarketName, "Market Name", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-snowflake"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.MarketName, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.MarketName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.ActiveIngredients, "المادة الفعالة", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.ActiveIngredients, "Active Ingridients", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-user-md"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.ActiveIngredients, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.ActiveIngredients, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.DoseAmount, "الجرعة المحددة", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.DoseAmount, new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-heartbeat"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.DoseAmount, new { id = "txtDose", @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.DoseAmount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.Price, "السعر", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.Price, "Price", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-money-bill-alt"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.AvailableAmount, "المتاح", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.AvailableAmount, "Available Amount",
+                                                    new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-shopping-cart"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.AvailableAmount, new { id = "txtAmount", @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.AvailableAmount, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.ProductionDate, "تاريخ الانتاج", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.ProductionDate, "Production Date", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-calendar"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.ProductionDate, new { id = "txtProd", @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.ProductionDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 text-right">
+                            @Html.LabelFor(model => model.ExpiryDate, "تاريخ الانتهاء", new { @class = "control-label" })
+                        </div>
+                        <div class="col-3 col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            @Html.LabelFor(model => model.ExpiryDate, "Expiry Date", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-calendar"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.ExpiryDate, new { id = "txtExp", @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.ExpiryDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                    @Html.ActionLink("Index", "Index", null, new { @class = "btn btn-danger btn-unified" })
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <input type="submit" value="Create" class="btn btn-primary btn-unified" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            registerObj.validateDecimals("txtAmount");
+
+            $("#txtProd").datepicker({
+                format: 'dd/mm/yyyy',
+                changeMonth: true,
+                changeYear: true,
+            });
+
+            $("#txtExp").datepicker({
+                format: 'dd/mm/yyyy',
+                changeMonth: true,
+                changeYear: true,
+            });
+        });
+    </script>
+}

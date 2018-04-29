@@ -1,0 +1,128 @@
+﻿@model DrugStore.ViewModels.DrugCompanyVM
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Edit - Drug Company</h2>
+@using (Html.BeginForm("Edit", "DrugCompanies", FormMethod.Post, htmlAttributes: new { autocomplete = "off" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.CompanyID)
+    @Html.HiddenFor(model => model.CreatedBy)
+    @Html.HiddenFor(model => model.CreatedDate)
+    @Html.HiddenFor(model => model.UpdatedBy)
+    @Html.HiddenFor(model => model.UpdatedDate)
+
+    <div class="container">
+        <div class="form-group">
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                            @Html.LabelFor(model => model.Name, "اسم الشركة", new { @class = "control-label" })
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            @Html.LabelFor(model => model.Name, "Company Name", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-info-circle"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                            @Html.LabelFor(model => model.Address, "عنوان الشركة", new { @class = "control-label" })
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            @Html.LabelFor(model => model.Address, "Address", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-address-card"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                            @Html.LabelFor(model => model.Phone, "تليفون الشركة", new { @class = "control-label" })
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            @Html.LabelFor(model => model.Phone, "Phone", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-phone"></i>
+                        </span>
+                        @Html.TextBoxFor(model => model.Phone, new { id = "txtPhone", @class = "form-control" })
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text-right">
+                            @Html.LabelFor(model => model.isLocal, "شركة محلية", new { @class = "control-label" })
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                            @Html.LabelFor(model => model.isLocal, "is Local", new { @class = "control-label" })
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-check"></i>
+                        </span>
+                        <div class="checkbox" style="padding-left:35px;">
+                            @Html.CheckBoxFor(model => model.isLocal, new { id = "chkActive", @class = "checkbox" })
+                        </div>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.isLocal, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                    @Html.ActionLink("Index", "Index", null, new { @class = "btn btn-danger btn-unified" })
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                    <input type="submit" value="Update" class="btn btn-primary btn-unified" />
+                </div>
+            </div>
+        </div>
+    </div>
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        registerObj.validatePhone("txtPhone");
+    });
+</script>

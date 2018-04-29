@@ -1,0 +1,76 @@
+﻿@model DrugStore.ViewModels.LoginVM
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using ( Html.BeginForm( "Login" , "Home" , FormMethod.Post , htmlAttributes: new { autocomplete = "off" } ) )
+{
+    @Html.AntiForgeryToken( )
+    <div class="container">
+        <div class="content">
+            <div class="fill">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            @Html.ValidationSummary( false , "" , new { @class = "text-danger" } )
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                            @Html.LabelFor( a => a.UserName , new { @class = "control-label" } )
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i style="color: #3b5997" class="glyphicon glyphicon-wrench"></i></span>
+                                @Html.TextBoxFor( a => a.UserName , new { @class = "form-control" } )
+                            </div>
+                            @Html.ValidationMessageFor( a => a.UserName , "" , new { @class = "control-label text-danger" } )
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                            @Html.LabelFor( a => a.Password , new { @class = "control-label" } )
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-lock"></i></span>
+                                @Html.TextBoxFor( a => a.Password ,
+                                         new
+                                         {
+                                             @class = "form-control" ,
+                                             style = "display: inline-block" ,
+                                             id = "txtPassword" ,
+                                             type = "password" ,
+                                             name = "password"
+                                         } )
+                                <span style="color: #3b5997; display: inline-block" class="glyphicon glyphicon-eye-close glyph"></span>
+                                @Html.ValidationMessageFor( a => a.Password , "" , new { @class = "text-danger" } )
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"></div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            @Html.ActionLink( "Register" , "Register" , null , new { @class = "btn btn-success btn-unified" } )
+                            &nbsp;
+                            &nbsp;
+                            <input type="submit" value="Login" class="btn btn-primary btn-unified" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            registerObj.toggleLogin();
+        });
+    </script>
+}
+
