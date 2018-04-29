@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugStore", "DrugStore\DrugStore.csproj", "{93E9BA84-21CA-472D-ABC6-FFE3A87E4CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugStore.Model", "DrugsStore.Models\DrugStore.Model.csproj", "{4F1B4005-0539-48CD-91D5-6155BDA5592E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrugStore.DAL", "DrugStore.DAL\DrugStore.DAL.csproj", "{8C6FABE8-A97A-405E-9900-1772A2F956E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93E9BA84-21CA-472D-ABC6-FFE3A87E4CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93E9BA84-21CA-472D-ABC6-FFE3A87E4CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93E9BA84-21CA-472D-ABC6-FFE3A87E4CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93E9BA84-21CA-472D-ABC6-FFE3A87E4CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1B4005-0539-48CD-91D5-6155BDA5592E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1B4005-0539-48CD-91D5-6155BDA5592E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1B4005-0539-48CD-91D5-6155BDA5592E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1B4005-0539-48CD-91D5-6155BDA5592E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C6FABE8-A97A-405E-9900-1772A2F956E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C6FABE8-A97A-405E-9900-1772A2F956E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C6FABE8-A97A-405E-9900-1772A2F956E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C6FABE8-A97A-405E-9900-1772A2F956E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://youseff.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DrugsStore.Models\\DrugStore.Model.csproj
+		SccProjectName1 = DrugsStore.Models
+		SccLocalPath1 = DrugsStore.Models
+		SccProjectUniqueName2 = DrugStore.DAL\\DrugStore.DAL.csproj
+		SccProjectName2 = DrugStore.DAL
+		SccLocalPath2 = DrugStore.DAL
+		SccProjectUniqueName3 = DrugStore\\DrugStore.csproj
+		SccProjectName3 = DrugStore
+		SccLocalPath3 = DrugStore
+	EndGlobalSection
+EndGlobal
