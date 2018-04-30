@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DrugStore.ViewModels
 {
-    public class UserRoleVM: IAuditBase
+    public class UserRoleVM : IAuditBase
     {
         public int UserRoleID { get; set; }
 

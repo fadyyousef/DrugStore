@@ -542,9 +542,7 @@ namespace DrugStore.Controllers
 
         public IPagedList<IGrouping<string, EmailLog>> Emails_PagedList(List<EmailLog> emails, int? pageNumber)
         {
-            return emails.OrderBy(a => a.EmailTo)
-                .GroupBy(a => a.EmailTo)
-                .ToPagedList(pageNumber ?? 1, 3);
+            return emails.GroupBy(a => a.EmailTo).ToPagedList(pageNumber ?? 1, 3);
         }
 
         #endregion

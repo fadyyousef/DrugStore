@@ -6,7 +6,7 @@ using DrugStore.ViewModels.Interfaces;
 
 namespace DrugStore.ViewModels
 {
-    public class DrugVM: IAuditBase
+    public class DrugVM : IAuditBase
     {
         public int ID { get; set; }
         public int CompanyID { get; set; }

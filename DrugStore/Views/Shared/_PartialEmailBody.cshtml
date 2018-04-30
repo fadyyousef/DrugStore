@@ -22,8 +22,12 @@
         &nbsp;
     </div>
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            @Html.Raw(HttpUtility.HtmlDecode(Model.EmailBody))  
+        <div class="col-md-4 col-md-12">
+            @{
+                var emailBody = MvcHtmlString.Create(Model.EmailBody);
+            }
+            @*@Html.TextAreaFor(m => emailBody, new { @class = "form-control", style = "width: 100%; height: 100%; margin: auto" })*@
+            @MvcHtmlString.Create(Model.EmailBody)
         </div>
     </div>
 </div>
