@@ -1,6 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
-using System.Web.Mvc.Html;
+﻿using System.Web.Mvc;
 
 public static class ExtensionMethods
 {
@@ -9,8 +7,15 @@ public static class ExtensionMethods
         string dialogId, string dialogTitle, string updateTargetId, string updateUrl)
     {
         TagBuilder builder = new TagBuilder("a");
+        if (!string.IsNullOrEmpty(dialogId))
+        {
+            builder.Attributes.Add("href", dialogContentUrl + "?id=" + dialogId);
+        }
+        else
+        {
+            builder.Attributes.Add("href", dialogContentUrl);
+        }
         builder.SetInnerText(linkText);
-        builder.Attributes.Add("href", dialogContentUrl);
         builder.Attributes.Add("data-dialog-title", dialogTitle);
         builder.Attributes.Add("data-update-target-id", updateTargetId);
         builder.Attributes.Add("data-update-url", updateUrl);

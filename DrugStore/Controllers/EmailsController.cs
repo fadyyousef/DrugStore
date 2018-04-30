@@ -68,6 +68,13 @@ namespace DrugStore.Controllers
             }
         }
 
+        public ActionResult ViewEmailBody(string id)
+        {
+            var intID = int.Parse(id);
+            var emailLog = _unitOfWork.EmailLogRepository.GetEmailById(intID);
+            return PartialView("_PartialEmailBody", emailLog);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

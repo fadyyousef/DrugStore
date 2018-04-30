@@ -58,9 +58,6 @@
                             @Html.ActionLink("Register", "Register", null, new { @class = "btn btn-success btn-unified" })
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                            @*@Html.ActionLink("Forgot Password", "ForgotPassword", null, new { @class = "btn btn-danger" })*@
-                            @*@Html.ActionLink("Forgot Password", "ForgotPassword", "Home", null,
-                                new { @class = "modal-link btn btn-danger" })*@
                             @Html.DialogFormLink("Forgot Password", Url.Action("ForgotPassword"), "", "Forgot Password", "",
                                      Url.Action("ForgotPassword"))
                         </div>
