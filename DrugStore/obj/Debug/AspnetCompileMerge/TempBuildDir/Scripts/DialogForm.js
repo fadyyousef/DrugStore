@@ -93,12 +93,8 @@ function wireUpForm(dialog, updateTargetId, updateUrl) {
                         }
                         $(msgLabel).addClass("text-success");
                         $(msgLabel).html(result.msg);
-                        $(dialog).append(msgLabel);
-
-                        setTimeout(function () {
-                            window.location.href = "/Home/Index";
-                        }, 1500);
-
+                        $(dialog).html(msgLabel);
+                        
                         // Reload the updated data in the target div
                         //$(updateTargetId).load(updateUrl);
                     }
@@ -111,17 +107,13 @@ function wireUpForm(dialog, updateTargetId, updateUrl) {
                         $(msgLabel).html(result.msg);
                         $(msgLabel).removeClass("text-success");
                         $(msgLabel).addClass("text-danger");
-                        $(dialog).append(msgLabel);
-
-                        setTimeout(function () {
-                            window.location.href = "/Home/Index";
-                        }, 1500);
-
+                        $(dialog).html(msgLabel);
+                        
                         // Enable client side validation
-                        //$.validator.unobtrusive.parse(dialog);
+                        $.validator.unobtrusive.parse(dialog);
 
                         // Setup the ajax submit logic
-                        //wireUpForm(dialog, updateTargetId, updateUrl);
+                        wireUpForm(dialog, updateTargetId, updateUrl);
                     }
                 }
             }

@@ -366,6 +366,13 @@ namespace DrugStore.Controllers
             return users != null ? users : new List<User>();
         }
 
+        public IPagedList<IGrouping<string, User>> Users_PagedList(List<User> users, int? pageNumber)
+        {
+            return users.OrderBy(a => a.FullName)
+                .GroupBy(a => a.UserRole.UserRoleName)
+                .ToPagedList(pageNumber ?? 1, 3);
+        }
+
         public void CreateUser(UserVM VM)
         {
             var User = new User()

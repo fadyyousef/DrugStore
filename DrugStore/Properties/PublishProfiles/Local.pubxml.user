@@ -16,10 +16,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:32</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/29/2018 05:49:16</publishTime>
+      <publishTime>04/30/2018 02:49:05</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/29/2018 05:49:16</publishTime>
+      <publishTime>04/30/2018 02:49:05</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Build.Engine.resources.dll">
       <publishTime>06/20/2016 15:12:26</publishTime>
@@ -31,22 +31,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/20/2016 15:12:26</publishTime>
     </File>
     <File Include="bin/DrugStore.DAL.dll">
-      <publishTime>04/29/2018 04:34:28</publishTime>
+      <publishTime>04/29/2018 08:44:33</publishTime>
     </File>
     <File Include="bin/DrugStore.DAL.pdb">
-      <publishTime>04/29/2018 04:34:28</publishTime>
+      <publishTime>04/29/2018 08:44:33</publishTime>
     </File>
     <File Include="bin/DrugStore.dll">
-      <publishTime>04/29/2018 05:49:07</publishTime>
+      <publishTime>04/30/2018 00:02:48</publishTime>
     </File>
     <File Include="bin/DrugStore.Model.dll">
-      <publishTime>04/29/2018 02:33:27</publishTime>
+      <publishTime>04/29/2018 08:44:28</publishTime>
     </File>
     <File Include="bin/DrugStore.Model.pdb">
-      <publishTime>04/29/2018 02:33:27</publishTime>
+      <publishTime>04/29/2018 08:44:28</publishTime>
     </File>
     <File Include="bin/DrugStore.pdb">
-      <publishTime>04/29/2018 05:49:07</publishTime>
+      <publishTime>04/30/2018 00:02:48</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>04/29/2018 01:13:59</publishTime>
@@ -394,7 +394,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2018 00:41:31</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/29/2018 05:49:09</publishTime>
+      <publishTime>04/30/2018 02:49:02</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>04/29/2018 01:11:15</publishTime>
@@ -403,7 +403,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:15</publishTime>
     </File>
     <File Include="Scripts/DialogForm.js">
-      <publishTime>04/28/2018 23:24:21</publishTime>
+      <publishTime>04/29/2018 08:39:22</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
       <publishTime>04/29/2018 01:11:17</publishTime>
@@ -525,6 +525,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Drugs/Index.cshtml">
       <publishTime>04/27/2018 23:29:16</publishTime>
     </File>
+    <File Include="Views/Emails/Index.cshtml">
+      <publishTime>04/29/2018 18:21:01</publishTime>
+    </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>04/29/2018 01:11:22</publishTime>
     </File>
@@ -553,10 +556,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2018 19:14:03</publishTime>
     </File>
     <File Include="Views/Shared/_PartialFiles.cshtml">
-      <publishTime>04/28/2018 19:40:45</publishTime>
+      <publishTime>04/29/2018 09:28:39</publishTime>
     </File>
     <File Include="Views/Shared/_PartialMenu.cshtml">
-      <publishTime>04/29/2018 01:11:22</publishTime>
+      <publishTime>04/29/2018 09:22:48</publishTime>
     </File>
     <File Include="Views/Shared/_PartialModal.cshtml">
       <publishTime>04/28/2018 18:01:59</publishTime>
@@ -574,7 +577,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:23</publishTime>
     </File>
     <File Include="Views/Users/Index.cshtml">
-      <publishTime>04/27/2018 23:29:05</publishTime>
+      <publishTime>04/30/2018 00:02:21</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/29/2018 01:11:20</publishTime>
@@ -583,7 +586,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/29/2018 05:47:38</publishTime>
+      <publishTime>04/30/2018 02:18:16</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.eot">
       <publishTime>04/29/2018 01:11:24</publishTime>

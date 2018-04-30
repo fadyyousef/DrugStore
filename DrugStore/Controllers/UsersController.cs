@@ -1,7 +1,7 @@
 ﻿using DrugStore.Helpers;
 using DrugStore.Model.Models;
 using DrugStore.ViewModels;
-using System.Collections.Generic;
+using PagedList;
 using System.Linq;
 using System.Net;
 using System.Web.Mvc;
@@ -13,27 +13,76 @@ namespace DrugStore.Controllers
     {
         // GET: Users
         [CustomAuthorize(Roles = CustomRoles.Admin)]
-        public ActionResult Index()
+        public ActionResult Index(string option, string search, int? pageNumber, string sort)
         {
+            option = option == null ? "" : option;
+            search = search == null ? "" : search.ToLower();
+            sort = sort == null ? "" : sort;
             if (checkSessions())
             {
                 var users = GetAllUsers();
-                var userVMList = new List<UserVM>();
+                ViewBag.SortByFullName = string.IsNullOrEmpty(sort) ? "descending FullName" : "";
+                ViewBag.SortByEmail = sort == "Email" ? "descending Email" : "Email";
+                ViewBag.SortByPhone = sort == "Phone" ? "descending Phone" : "Phone";
+                var userGroups = Users_PagedList(users.ToList(), pageNumber);
 
-                foreach (var user in users)
+                //validation
+                if (string.IsNullOrEmpty(search) == false && string.IsNullOrEmpty(option) == true)
                 {
-                    var userVM = CreateViewModel(user);
-                    userVMList.Add(userVM);
+                    ModelState.AddModelError("Options", "Please Select Option from the drop down");
+                    return View(userGroups);
                 }
-                userVMList = userVMList.OrderBy(a => a.UserRole).ToList();
-                return View(userVMList);
+                switch (option)
+                {
+                    case "FullName":
+                        users = users.Where(x => x.FullName.ToLower().Contains(search) || search == null)
+                            .ToList().ToPagedList(pageNumber ?? 1, 3);
+                        break;
+                    case "Email":
+                        users = users.Where(x => x.Email.ToLower().Contains(search) || search == null)
+                            .ToList().ToPagedList(pageNumber ?? 1, 3);
+                        break;
+                    case "Phone":
+                        users = users.Where(x => x.Phone.ToLower().Contains(search) || search == null)
+                            .ToList().ToPagedList(pageNumber ?? 1, 3);
+                        break;
+                    default:
+                        users = users.Where(x => x.FullName.ToLower().StartsWith(search) || search == null)
+                            .ToList().ToPagedList(pageNumber ?? 1, 3);
+                        break;
+                }
+                switch (sort)
+                {
+                    case "FullName":
+                        users = users.OrderBy(x => x.FullName);
+                        break;
+                    case "Email":
+                        users = users.OrderBy(x => x.Email);
+                        break;
+                    case "Phone":
+                        users = users.OrderBy(x => x.Phone);
+                        break;
+                    case "descending FullName":
+                        users = users.OrderByDescending(x => x.FullName);
+                        break;
+                    case "descending Email":
+                        users = users.OrderByDescending(x => x.Email);
+                        break;
+                    case "descending Phone":
+                        users = users.OrderByDescending(x => x.Phone);
+                        break;
+                    default:
+                        users = users.OrderBy(x => x.FullName);
+                        break;
+                }
+                userGroups = Users_PagedList(users.ToList(), pageNumber);
+                return View(userGroups);
             }
             else
             {
                 return RedirectToAction("Login", "Home");
             }
         }
-
         // GET: Users/Details/5
         [CustomAuthorize(Roles = CustomRoles.Admin)]
         public ActionResult Details(int? id)
