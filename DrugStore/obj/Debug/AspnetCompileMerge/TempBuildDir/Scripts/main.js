@@ -74,6 +74,7 @@
                     $("#txtConfirmPassword").attr("type", "password");
                 });
         });
+        $('#txtPassword + .glyphicon').click();
     },
 
     validatePhone: function (elem) {

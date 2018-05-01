@@ -111,7 +111,7 @@
                                  type = "password" ,
                                  name = "password"
                              } )
-                        <span style="color: #3b5997; display: inline-block" class="glyphicon glyphicon-eye-close glyph"></span>
+                        <span style="color: #3b5997; display: inline-block; z-index: 999" class="glyphicon glyphicon-eye-close glyph"></span>
                     </div>
                     @Html.ValidationMessageFor( a => a.Password , null , new { @class = "text-danger" , id = "ErrPassword" } )
                 </div>

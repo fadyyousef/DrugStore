@@ -96,8 +96,8 @@ C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Deploym
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.dll
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\System.Web.WebPages.Razor.dll
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\WebGrease.dll
-C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.Model.pdb
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.DAL.pdb
+C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\DrugStore.Model.pdb
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\Antlr3.Runtime.pdb
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.xml
 C:\Users\Fady\Desktop\GitHub\DrugStore\DrugStore\bin\EntityFramework.SqlServer.xml

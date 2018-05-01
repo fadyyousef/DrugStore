@@ -347,13 +347,13 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DrugsStore.Models\DrugStore.Model.csproj">
-      <Project>{4f1b4005-0539-48cd-91d5-6155bda5592e}</Project>
-      <Name>DrugStore.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DrugStore.DAL\DrugStore.DAL.csproj">
       <Project>{8c6fabe8-a97a-405e-9900-1772a2f956e4}</Project>
       <Name>DrugStore.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DrugStore.Models\DrugStore.Model.csproj">
+      <Project>{4f1b4005-0539-48cd-91d5-6155bda5592e}</Project>
+      <Name>DrugStore.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

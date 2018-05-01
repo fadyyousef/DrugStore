@@ -10,7 +10,6 @@
     listItems.Add(new SelectListItem { Text = "Full Name", Value = "FullName" });
     listItems.Add(new SelectListItem { Text = "Email", Value = "Email" });
     listItems.Add(new SelectListItem { Text = "Phone", Value = "Phone" });
-    listItems.Add(new SelectListItem { Text = "Active", Value = "Active" });
 }
 <link href="~/Content/PagedList.css" rel="stylesheet" />
 <h2>Index - Users</h2>
@@ -27,7 +26,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
                 <b>Search Option: </b>
                 @Html.DropDownList("option", listItems, "--Select Option--",
-                       new { @class = "form-control", style = "display: inline-block; width: 150px;" })
+                                 new { @class = "form-control", style = "display: inline-block; width: 150px;" })
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 @Html.TextBox("search", null, new { @class = "form-control" })
@@ -38,16 +37,17 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">&nbsp;</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 @Html.PagedListPager(Model, pageNumber => Url.Action("Index", new
-           {
-               pageNumber,
-               option = Request.QueryString["option"],
-               search = Request.QueryString["search"],
-               sort = Request.QueryString["sort"]
-           }))
+                {
+                    pageNumber,
+                    option = Request.QueryString["option"],
+                    search = Request.QueryString["search"],
+                    sort = Request.QueryString["sort"]
+                }))
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 @Html.ValidationMessage("Options", "", new { @class = "text-danger" })
             </div>
         </div>
@@ -64,44 +64,37 @@
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                 <label class="control-label">
                                     @Html.ActionLink("FullName", "Index", new
-                               {
-                                   sort = ViewBag.SortByFullName,
-                                   option = Request.QueryString["option"],
-                                   search = Request.QueryString["search"]
-                               })
+                                    {
+                                        sort = ViewBag.SortByFullName,
+                                        option = Request.QueryString["option"],
+                                        search = Request.QueryString["search"]
+                                    })
                                 </label>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                 <label class="control-label">
                                     @Html.ActionLink("Email", "Index", new
-                               {
-                                   sort = ViewBag.SortByEmail,
-                                   option = Request.QueryString["option"],
-                                   search = Request.QueryString["search"]
-                               })
+                                    {
+                                        sort = ViewBag.SortByEmail,
+                                        option = Request.QueryString["option"],
+                                        search = Request.QueryString["search"]
+                                    })
                                 </label>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                                 <label class="control-label">
                                     @Html.ActionLink("Phone", "Index", new
-                               {
-                                   sort = ViewBag.SortByPhone,
-                                   option = Request.QueryString["option"],
-                                   search = Request.QueryString["search"]
-                               })
+                                    {
+                                        sort = ViewBag.SortByPhone,
+                                        option = Request.QueryString["option"],
+                                        search = Request.QueryString["search"]
+                                    })
                                 </label>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                                <label class="control-label">
-                                    @Html.ActionLink("Active", "Index", new
-                               {
-                                   sort = ViewBag.SortByActive,
-                                   option = Request.QueryString["option"],
-                                   search = Request.QueryString["search"]
-                               })
-                                </label>
+                            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                <label class="control-label">Active</label>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <label class="control-label">Actions</label>
                             </div>
                         </div>
@@ -130,23 +123,34 @@
                             @foreach (var item in group)
                             {
                                 <div class="row row-striped">
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
-                                        @Html.DisplayFor(modelItem => item.UserRole.UserRoleName, "User Role")
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="word-wrap: break-word;">
                                         @Html.DisplayFor(modelItem => item.FullName, "Full Name")
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="word-wrap: break-word;">
                                         @Html.DisplayFor(modelItem => item.Email, "Email")
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
+                                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="word-wrap: break-word;">
                                         @Html.DisplayFor(modelItem => item.Phone, "Phone")
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
+                                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1" style="word-wrap: break-word;">
                                         @Html.DisplayFor(modelItem => item.IsActive, "Active")
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="word-wrap: break-word;">
-                                        <label class="control-label">Action</label>
+                                        @if (isAdmin)
+                                        {
+                                            <div>
+                                                @Html.ActionLink(" ", "Edit", new { id = item.ID },
+                                                    new { id = item.ID, @class = "btn btn-primary fa fa-edit", title = "Edit" })
+                                                |
+                                                @Html.ActionLink(" ", "Details", new { id = item.ID },
+                                                    new { id = item.ID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
+                                                |
+                                                @Html.ActionLink(" ", "Delete", new { id = item.ID },
+                                                    new { id = item.ID, @class = "btn btn-danger fa fa-times", title = "Delete" })
+                                            </div>
+                                        }
+                                        else
+                                        { }
                                     </div>
                                 </div>
                             }

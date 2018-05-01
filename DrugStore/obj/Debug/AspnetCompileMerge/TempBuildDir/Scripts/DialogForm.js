@@ -24,10 +24,10 @@
                 closeOnEscape: false,
                 title: dialogTitle,
                 buttons: {
-                    
+
                 },
-                width: "600px",
-                minWidth: "600px",
+                width: "500px",
+                minWidth: "500px",
                 maxWidth: "600px",
                 //height: "300px",
                 //minHeight: "300px",
@@ -94,7 +94,7 @@ function wireUpForm(dialog, updateTargetId, updateUrl) {
                         $(msgLabel).addClass("text-success");
                         $(msgLabel).html(result.msg);
                         $(dialog).html(msgLabel);
-                        
+
                         // Reload the updated data in the target div
                         //$(updateTargetId).load(updateUrl);
                     }
@@ -108,7 +108,7 @@ function wireUpForm(dialog, updateTargetId, updateUrl) {
                         $(msgLabel).removeClass("text-success");
                         $(msgLabel).addClass("text-danger");
                         $(dialog).html(msgLabel);
-                        
+
                         // Enable client side validation
                         $.validator.unobtrusive.parse(dialog);
 

@@ -16,10 +16,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:32</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>04/30/2018 02:49:05</publishTime>
+      <publishTime>05/01/2018 07:17:45</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>04/30/2018 02:49:05</publishTime>
+      <publishTime>05/01/2018 07:17:45</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Build.Engine.resources.dll">
       <publishTime>06/20/2016 15:12:26</publishTime>
@@ -31,28 +31,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/20/2016 15:12:26</publishTime>
     </File>
     <File Include="bin/DrugStore.DAL.dll">
-      <publishTime>04/29/2018 08:44:33</publishTime>
+      <publishTime>05/01/2018 06:39:13</publishTime>
     </File>
     <File Include="bin/DrugStore.DAL.pdb">
-      <publishTime>04/29/2018 08:44:33</publishTime>
+      <publishTime>05/01/2018 06:39:13</publishTime>
     </File>
     <File Include="bin/DrugStore.dll">
-      <publishTime>04/30/2018 00:02:48</publishTime>
+      <publishTime>05/01/2018 07:14:29</publishTime>
     </File>
     <File Include="bin/DrugStore.Model.dll">
-      <publishTime>04/29/2018 08:44:28</publishTime>
+      <publishTime>05/01/2018 06:39:04</publishTime>
     </File>
     <File Include="bin/DrugStore.Model.pdb">
-      <publishTime>04/29/2018 08:44:28</publishTime>
+      <publishTime>05/01/2018 06:39:04</publishTime>
     </File>
     <File Include="bin/DrugStore.pdb">
-      <publishTime>04/30/2018 00:02:48</publishTime>
+      <publishTime>05/01/2018 07:14:29</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>04/29/2018 01:13:59</publishTime>
+      <publishTime>04/29/2018 01:15:08</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>04/29/2018 01:13:27</publishTime>
+      <publishTime>04/29/2018 01:14:06</publishTime>
     </File>
     <File Include="bin/es/Microsoft.Build.Engine.resources.dll">
       <publishTime>06/20/2016 15:12:26</publishTime>
@@ -183,287 +183,293 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/zh-CHT/MSBuild.resources.dll">
       <publishTime>06/20/2016 15:12:26</publishTime>
     </File>
+    <File Include="Content/bootstrap-glyphicons.css">
+      <publishTime>05/01/2018 01:50:36</publishTime>
+    </File>
     <File Include="Content/bootstrap.css">
-      <publishTime>04/29/2018 01:11:00</publishTime>
+      <publishTime>05/01/2018 07:05:06</publishTime>
     </File>
     <File Include="Content/bootstrap.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>05/01/2018 07:05:15</publishTime>
     </File>
     <File Include="Content/fa-brands.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:16</publishTime>
     </File>
     <File Include="Content/fa-brands.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:16</publishTime>
     </File>
     <File Include="Content/fa-regular.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fa-regular.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fa-solid.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fa-solid.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fontawesome-all.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fontawesome-all.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fontawesome.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/fontawesome.min.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 03:19:15</publishTime>
     </File>
     <File Include="Content/images/ui-icons_444444_256x240.png">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/images/ui-icons_555555_256x240.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/images/ui-icons_777620_256x240.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/images/ui-icons_777777_256x240.png">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/images/ui-icons_cc0000_256x240.png">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/images/ui-icons_ffffff_256x240.png">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/jquery-ui.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/jquery-ui.structure.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/jquery-ui.theme.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/PagedList.css">
-      <publishTime>04/29/2018 01:11:10</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>04/28/2018 18:04:06</publishTime>
+      <publishTime>04/30/2018 02:56:16</publishTime>
     </File>
     <File Include="Content/themes/base/accordion.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/all.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/autocomplete.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/base.css">
-      <publishTime>04/29/2018 01:11:11</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/button.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/core.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/datepicker.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/dialog.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/draggable.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_222222_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_2e83ff_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_444444_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_454545_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_555555_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_777620_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_777777_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_888888_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_cc0000_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_cd0a0a_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/images/ui-icons_ffffff_256x240.png">
-      <publishTime>04/29/2018 01:11:13</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/jquery-ui.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/jquery-ui.min.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/menu.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/progressbar.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/resizable.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:14</publishTime>
     </File>
     <File Include="Content/themes/base/selectable.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/selectmenu.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/slider.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/sortable.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/spinner.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/tabs.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/theme.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="Content/themes/base/tooltip.css">
-      <publishTime>04/29/2018 01:11:12</publishTime>
+      <publishTime>04/30/2018 02:43:15</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>04/29/2018 01:10:57</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.eot">
-      <publishTime>04/29/2018 01:11:14</publishTime>
+      <publishTime>05/01/2018 02:08:02</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.svg">
-      <publishTime>04/29/2018 01:11:14</publishTime>
+      <publishTime>05/01/2018 02:08:01</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.ttf">
-      <publishTime>04/29/2018 01:11:14</publishTime>
+      <publishTime>05/01/2018 02:08:01</publishTime>
     </File>
     <File Include="fonts/glyphicons-halflings-regular.woff">
-      <publishTime>04/29/2018 01:11:14</publishTime>
+      <publishTime>05/01/2018 02:08:01</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>05/01/2018 02:08:01</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/28/2018 00:41:31</publishTime>
+      <publishTime>05/01/2018 02:08:02</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>04/30/2018 02:49:02</publishTime>
+      <publishTime>05/01/2018 07:17:40</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
-      <publishTime>04/29/2018 01:11:15</publishTime>
+      <publishTime>05/01/2018 02:08:01</publishTime>
     </File>
     <File Include="Scripts/bootstrap.min.js">
-      <publishTime>04/29/2018 01:11:15</publishTime>
+      <publishTime>05/01/2018 02:08:01</publishTime>
     </File>
     <File Include="Scripts/DialogForm.js">
-      <publishTime>04/29/2018 08:39:22</publishTime>
+      <publishTime>04/30/2018 03:51:32</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.js">
-      <publishTime>04/29/2018 01:11:17</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.js">
-      <publishTime>04/29/2018 01:11:18</publishTime>
+      <publishTime>04/30/2018 02:43:16</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.min.map">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.js">
-      <publishTime>04/29/2018 01:11:18</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/jquery-3.3.1.slim.min.map">
-      <publishTime>04/29/2018 01:11:17</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/jquery-ui-1.12.1.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:18</publishTime>
     </File>
     <File Include="Scripts/jquery-ui-1.12.1.min.js">
-      <publishTime>04/29/2018 01:11:18</publishTime>
+      <publishTime>04/30/2018 02:43:20</publishTime>
     </File>
     <File Include="Scripts/jquery-ui.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:19</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.js">
-      <publishTime>04/29/2018 01:11:17</publishTime>
+      <publishTime>04/30/2018 02:43:16</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.min.js">
-      <publishTime>04/29/2018 01:11:16</publishTime>
+      <publishTime>04/30/2018 02:43:16</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.js">
-      <publishTime>04/07/2018 06:45:11</publishTime>
+      <publishTime>04/30/2018 03:19:16</publishTime>
     </File>
     <File Include="Scripts/jquery.validate.unobtrusive.min.js">
-      <publishTime>04/07/2018 06:45:11</publishTime>
+      <publishTime>04/30/2018 03:19:16</publishTime>
     </File>
     <File Include="Scripts/main.js">
-      <publishTime>04/29/2018 01:11:17</publishTime>
+      <publishTime>04/30/2018 04:34:29</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.8.3.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:17</publishTime>
     </File>
     <File Include="Scripts/respond.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:18</publishTime>
     </File>
     <File Include="Scripts/respond.matchmedia.addListener.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:18</publishTime>
     </File>
     <File Include="Scripts/respond.matchmedia.addListener.min.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:18</publishTime>
     </File>
     <File Include="Scripts/respond.min.js">
-      <publishTime>04/29/2018 01:11:19</publishTime>
+      <publishTime>04/30/2018 02:43:18</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>04/28/2018 19:25:44</publishTime>
+      <publishTime>04/30/2018 02:43:16</publishTime>
     </File>
     <File Include="Views/DrugCategories/Create.cshtml">
       <publishTime>04/29/2018 01:11:20</publishTime>
@@ -526,7 +532,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/27/2018 23:29:16</publishTime>
     </File>
     <File Include="Views/Emails/Index.cshtml">
-      <publishTime>04/29/2018 18:21:01</publishTime>
+      <publishTime>04/30/2018 08:06:31</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>04/29/2018 01:11:22</publishTime>
@@ -535,28 +541,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:22</publishTime>
     </File>
     <File Include="Views/Home/EditProfile.cshtml">
-      <publishTime>04/27/2018 23:26:15</publishTime>
+      <publishTime>04/30/2018 07:22:49</publishTime>
     </File>
     <File Include="Views/Home/ForgotPassword.cshtml">
-      <publishTime>04/28/2018 19:44:36</publishTime>
+      <publishTime>05/01/2018 06:10:52</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>04/29/2018 01:11:22</publishTime>
     </File>
     <File Include="Views/Home/Login.cshtml">
-      <publishTime>04/28/2018 19:29:26</publishTime>
+      <publishTime>04/30/2018 07:27:37</publishTime>
     </File>
     <File Include="Views/Home/Register.cshtml">
-      <publishTime>04/29/2018 01:11:22</publishTime>
+      <publishTime>04/30/2018 04:32:03</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>04/29/2018 01:11:22</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>04/28/2018 19:14:03</publishTime>
+      <publishTime>05/01/2018 07:05:37</publishTime>
+    </File>
+    <File Include="Views/Shared/_PartialEmailBody.cshtml">
+      <publishTime>05/01/2018 06:21:20</publishTime>
     </File>
     <File Include="Views/Shared/_PartialFiles.cshtml">
-      <publishTime>04/29/2018 09:28:39</publishTime>
+      <publishTime>05/01/2018 02:20:16</publishTime>
     </File>
     <File Include="Views/Shared/_PartialMenu.cshtml">
       <publishTime>04/29/2018 09:22:48</publishTime>
@@ -565,19 +574,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/28/2018 18:01:59</publishTime>
     </File>
     <File Include="Views/Users/Create.cshtml">
-      <publishTime>04/29/2018 01:11:22</publishTime>
+      <publishTime>04/30/2018 04:32:46</publishTime>
     </File>
     <File Include="Views/Users/Delete.cshtml">
-      <publishTime>04/29/2018 01:11:22</publishTime>
+      <publishTime>04/30/2018 04:32:37</publishTime>
     </File>
     <File Include="Views/Users/Details.cshtml">
-      <publishTime>04/29/2018 01:11:22</publishTime>
+      <publishTime>04/30/2018 04:32:27</publishTime>
     </File>
     <File Include="Views/Users/Edit.cshtml">
-      <publishTime>04/29/2018 01:11:23</publishTime>
+      <publishTime>04/30/2018 04:31:07</publishTime>
     </File>
     <File Include="Views/Users/Index.cshtml">
-      <publishTime>04/30/2018 00:02:21</publishTime>
+      <publishTime>04/30/2018 04:04:39</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>04/29/2018 01:11:20</publishTime>
@@ -586,7 +595,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2018 01:11:20</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/30/2018 02:18:16</publishTime>
+      <publishTime>05/01/2018 06:52:08</publishTime>
     </File>
     <File Include="webfonts/fa-brands-400.eot">
       <publishTime>04/29/2018 01:11:24</publishTime>
