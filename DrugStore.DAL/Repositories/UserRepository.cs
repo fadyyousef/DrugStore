@@ -94,6 +94,12 @@ namespace DrugStore.DAL.Repositories
             return result;
         }
 
+        public UserRole getUserRoleByID(int userRoleID)
+        {
+            var result = _context.UserRole.Where(a => a.UserRoleID == userRoleID).FirstOrDefault();
+            return result;
+        }
+
         public string getUserRole(int userRoleID)
         {
             var result = _context.UserRole.Where(a => a.UserRoleID == userRoleID).FirstOrDefault().UserRoleName;

@@ -5,11 +5,12 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var isAdmin = User.IsInRole("Admin");
+    var isAdminLite = User.IsInRole("Admin Lite");
 }
 <link href="~/Content/PagedList.css" rel="stylesheet" />
 
 <h2>Index - Drug Companies</h2>
-@if (isAdmin)
+@if (isAdmin || isAdminLite)
 {
     <p>
         @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
@@ -21,16 +22,16 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 @Html.PagedListPager(Model, pageNumber => Url.Action("Index", new
-           {
-               pageNumber,
-               search = Request.QueryString["search"],
-               sort = Request.QueryString["sort"]
-           }))
+                {
+                    pageNumber,
+                    search = Request.QueryString["search"],
+                    sort = Request.QueryString["sort"]
+                }))
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <b>Search: </b>
                 @Html.TextBox("search", null,
-             new { @class = "form-control", style = "display: inline-block; width: 150px" })
+                  new { @class = "form-control", style = "display: inline-block; width: 150px" })
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <input type="submit" value="Search" class="btn btn-primary" />
@@ -45,10 +46,10 @@
             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 text-right">
                 <label class="control-label">
                     @Html.ActionLink("Company Name", "Index", new
-               {
-                   sort = ViewBag.SortByName,
-                   search = Request.QueryString["search"]
-               })
+                    {
+                        sort = ViewBag.SortByName,
+                        search = Request.QueryString["search"]
+                    })
                 </label>
                 <br />
                 <label class="control-label">اسم الشركة</label>
@@ -73,17 +74,17 @@
                     &nbsp;
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    @if (isAdmin)
+                    @if (isAdmin || isAdminLite)
                     {
                         <div>
                             @Html.ActionLink(" ", "Edit", new { id = item.CompanyID },
-                            new { id = item.CompanyID, @class = "btn btn-primary fa fa-edit", title = "Edit" })
+                                 new { id = item.CompanyID, @class = "btn btn-primary fa fa-edit", title = "Edit" })
                             |
                             @Html.ActionLink(" ", "Details", new { id = item.CompanyID },
-                            new { id = item.CompanyID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
+                                 new { id = item.CompanyID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
                             |
                             @Html.ActionLink(" ", "Delete", new { id = item.CompanyID },
-                            new { id = item.CompanyID, @class = "btn btn-danger fa fa-times", title = "Delete" })
+                                 new { id = item.CompanyID, @class = "btn btn-danger fa fa-times", title = "Delete" })
                         </div>
                     }
                     else { }

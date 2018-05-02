@@ -6,6 +6,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var isAdmin = User.IsInRole("Admin");
+    var isAdminLite = User.IsInRole("Admin Lite");
     List<SelectListItem> listItems = new List<SelectListItem>();
     listItems.Add(new SelectListItem { Text = "Full Name", Value = "FullName" });
     listItems.Add(new SelectListItem { Text = "Email", Value = "Email" });
@@ -13,7 +14,7 @@
 }
 <link href="~/Content/PagedList.css" rel="stylesheet" />
 <h2>Index - Users</h2>
-@if (isAdmin)
+@if (isAdmin || isAdminLite)
 {
     <p>
         @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
@@ -26,7 +27,7 @@
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
                 <b>Search Option: </b>
                 @Html.DropDownList("option", listItems, "--Select Option--",
-                                 new { @class = "form-control", style = "display: inline-block; width: 150px;" })
+                                      new { @class = "form-control", style = "display: inline-block; width: 150px;" })
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 @Html.TextBox("search", null, new { @class = "form-control" })
@@ -107,17 +108,18 @@
     <div class="panel-group" id="accordion">
         @foreach (var group in Model)
         {
+            var key = group.Key.Replace(" ", "");
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#@group.Key"
+                        <a data-toggle="collapse" data-parent="#accordion" href="#@key"
                            class="btn btn-default panelLink collapse">
                             <span class="more-less fa fa-plus"></span>
                             @group.Key
                         </a>
                     </h4>
                 </div>
-                <div id="@group.Key" class="panel-collapse collapse" style="height: 0px;">
+                <div id="@key" class="panel-collapse collapse" style="height: 0px;">
                     <div class="panel-body">
                         <div class="form-group" style="margin: 0">
                             @foreach (var item in group)
@@ -140,17 +142,19 @@
                                         {
                                             <div>
                                                 @Html.ActionLink(" ", "Edit", new { id = item.ID },
-                                                    new { id = item.ID, @class = "btn btn-primary fa fa-edit", title = "Edit" })
+                          new { id = item.ID, @class = "btn btn-primary fa fa-edit", title = "Edit" })
                                                 |
                                                 @Html.ActionLink(" ", "Details", new { id = item.ID },
-                                                    new { id = item.ID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
+                          new { id = item.ID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
                                                 |
                                                 @Html.ActionLink(" ", "Delete", new { id = item.ID },
-                                                    new { id = item.ID, @class = "btn btn-danger fa fa-times", title = "Delete" })
+                          new { id = item.ID, @class = "btn btn-danger fa fa-times", title = "Delete" })
                                             </div>
                                         }
                                         else
-                                        { }
+                                        {
+                                            @Html.Label("Denied Access", new { @class = "control-label" })
+                                        }
                                     </div>
                                 </div>
                             }

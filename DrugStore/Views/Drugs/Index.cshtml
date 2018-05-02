@@ -5,13 +5,15 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var isAdmin = User.IsInRole("Admin");
+    var isAdminLite = User.IsInRole("Admin Lite");
+
     List<SelectListItem> listItems = new List<SelectListItem>();
     listItems.Add(new SelectListItem { Text = "Name", Value = "Name" });
     listItems.Add(new SelectListItem { Text = "Market Name", Value = "MarketName" });
 }
 <link href="~/Content/PagedList.css" rel="stylesheet" />
 <h2>Index - Drugs</h2>
-@if (isAdmin)
+@if (isAdmin || isAdminLite)
 {
     <p>
         @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
@@ -151,7 +153,7 @@
                                         @Html.DisplayFor(modelItem => item.AvailableAmount)
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="word-wrap: break-word;">
-                                        @if (isAdmin)
+                                        @if (isAdmin || isAdminLite)
                                         {
                                             <div>
                                                 @Html.ActionLink(" ", "Edit", new { id = item.ID },

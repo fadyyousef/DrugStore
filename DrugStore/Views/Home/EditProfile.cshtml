@@ -4,7 +4,8 @@
     ViewBag.Title = "EditProfile";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var isAdmin = User.IsInRole("Admin");
-    var userRole = isAdmin ? "Admin" : "User";
+    var isAdminLite = User.IsInRole("Admin Lite");
+    var userRole = isAdmin ? (isAdminLite ? "Admin Lite" : "User") : "User";
 }
 <h2>Edit Profile</h2>
 <hr />
@@ -33,7 +34,9 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                     <div class="input-group">
-                        <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-wrench"></i></span>
+                        <span class="input-group-addon" style="width: 40px;">
+                            <i style="color: #3b5997" class="fa fa-wrench"></i>
+                        </span>
                         @Html.TextBoxFor(a => a.UserName, new { @class = "form-control" })
                     </div>
                     @Html.ValidationMessageFor(a => a.UserName, null, new { @class = "control-label text-danger" })
@@ -46,19 +49,19 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="input-group">
-                        <span class="input-group-addon">
+                        <span class="input-group-addon" style="width: 40px;">
                             <i style="color: #3b5997" class="fa fa-lock"></i>
                         </span>
                         @Html.TextBoxFor(a => a.Password,
-                                     new
-                                     {
-                                         @class = "form-control",
-                                         style = "display: inline-block",
-                                         id = "txtPassword",
-                                         type = "password",
-                                         name = "password"
-                                     })
-                        <span style="color: #3b5997; display: inline-block; z-index: 999" class="glyphicon glyphicon-eye-close glyph">
+                           new
+                           {
+                               @class = "form-control",
+                               style = "display: inline-block",
+                               id = "txtPassword",
+                               type = "password",
+                               name = "password"
+                           })
+                        <span style="color: #3b5997; display: inline-block; z-index: 999" class="fa fa-eye glyph">
                         </span>
                         @Html.ValidationMessageFor(a => a.Password, "", new { @class = "text-danger" })
                     </div>
@@ -71,14 +74,14 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                     <div class="input-group">
-                        <span class="input-group-addon">
+                        <span class="input-group-addon" style="width: 40px;">
                             <i style="color: #3b5997" class="fa fa-lock"></i>
                         </span>
                         @Html.TextBoxFor(a => a.ConfirmPassword,
-                                     new { @class = "form-control", id = "txtConfirmPassword", type = "password", name = "password" })
+                           new { @class = "form-control", id = "txtConfirmPassword", type = "password", name = "password" })
                     </div>
                     @Html.ValidationMessageFor(a => a.ConfirmPassword, null,
-                                 new { @class = "text-danger", id = "ErrConfirmPassword" })
+                                      new { @class = "text-danger", id = "ErrConfirmPassword" })
                 </div>
             </div>
 
@@ -93,13 +96,13 @@
                         </span>
                         <div class="checkbox" style="padding-left:35px;">
                             @if (isAdmin)
-                                {
-                            @Html.CheckBoxFor(model => model.IsActive, new { id = "chkActive", @class = "checkbox" })
-                                }
-                                else
-                                {
-                            @Html.CheckBoxFor(model => model.IsActive, new { id = "chkActive", @class = "checkbox", onclick = "return false;" })
-                                }
+                            {
+                                @Html.CheckBoxFor(model => model.IsActive, new { id = "chkActive", @class = "checkbox" })
+                            }
+                            else
+                            {
+                                @Html.CheckBoxFor(model => model.IsActive, new { id = "chkActive", @class = "checkbox", onclick = "return false;" })
+                            }
                         </div>
                     </div>
                 </div>
@@ -113,7 +116,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                         <div class="input-group">
-                            <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                            <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
                             @Html.TextBoxFor(a => a.FirstName, new { @class = "form-control", maxlength = "25" })
                         </div>
                         @Html.ValidationMessageFor(a => a.FirstName, null, new { @class = "control-label text-danger" })
@@ -126,7 +129,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                         <div class="input-group">
-                            <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                            <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
                             @Html.TextBoxFor(a => a.MiddleName, new { @class = "form-control", maxlength = "25" })
                         </div>
                         @Html.ValidationMessageFor(a => a.MiddleName, null, new { @class = "control-label text-danger" })
@@ -139,7 +142,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                         <div class="input-group">
-                            <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
+                            <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-info-circle"></i></span>
                             @Html.TextBoxFor(a => a.LastName, new { @class = "form-control", maxlength = "25" })
                         </div>
                         @Html.ValidationMessageFor(a => a.LastName, null, new { @class = "control-label text-danger" })
@@ -158,11 +161,10 @@
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
                         @Html.LabelFor(model => model.FullName, "Full Name ", new { @class = "control-label" })
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-left">
                         <div class="input-group">
-                            <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-info"></i></span>
-                            @Html.TextBoxFor(a => a.FullName,
-                                     new { @class = "form-control", maxlength = "25", @readonly = "readonly" })
+                            <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-info"></i></span>
+                            @Html.TextBoxFor(a => a.FullName, new { @class = "form-control", maxlength = "25", @readonly = "readonly" })
                         </div>
                         @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
                     </div>
@@ -175,9 +177,8 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                     <div class="input-group">
-                        <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-envelope"></i></span>
-                        @Html.TextBoxFor(a => a.Email,
-                                 new { @class = "form-control", maxlength = "100", placeholder = "user@company.com" })
+                        <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-envelope"></i></span>
+                        @Html.TextBoxFor(a => a.Email, new { @class = "form-control", maxlength = "100", placeholder = "user@company.com" })
                     </div>
                     @Html.ValidationMessageFor(a => a.Email, null, new { @class = "control-label text-danger" })
                 </div>
@@ -189,9 +190,9 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                     <div class="input-group">
-                        <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-phone"></i></span>
+                        <span class="input-group-addon" style="width: 40px;"><i style="color: #3b5997" class="fa fa-phone"></i></span>
                         @Html.TextBoxFor(a => a.Phone,
-                                 new { @class = "form-control", id = "txtPhone", maxlength = "25" })
+                                      new { @class = "form-control", id = "txtPhone", maxlength = "25" })
                     </div>
                     @Html.ValidationMessageFor(a => a.Phone, null, new { @class = "control-label text-danger" })
                 </div>
@@ -203,13 +204,18 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div class="input-group">
-                        <span class="input-group-addon">
+                        <span class="input-group-addon" style="width: 40px;">
                             <i style="color: #3b5997" class="fa fa-cog"></i>
                         </span>
                         @if (isAdmin)
                         {
                             @Html.DropDownListFor(m => m.SelectedUserRoleID,
-                                     Model.UserRoles, "--Select Role--", new { @class = "form-control" })
+                                Model.UserRoles, "--Select Role--", new { @class = "form-control" })
+                        }
+                        else if (isAdminLite)
+                        {
+                            @Html.TextBoxFor(model => userRole, "Admin Lite", new { @class = "form-control", @readonly = "readonly" })
+                            @Html.HiddenFor(m => m.SelectedUserRoleID)
                         }
                         else
                         {

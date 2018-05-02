@@ -18,35 +18,36 @@
 
         // Load the form into the dialog div
         $(dialogDiv).load(this.href, function () {
+
+            $('.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-resizable').remove();
+            $('.ui-widget-overlay.ui-front').remove();
+
             var modalDialog = $(this).dialog({
                 modal: true,
                 draggable: false,
                 closeOnEscape: false,
                 title: dialogTitle,
-                buttons: {
-
-                },
                 width: "500px",
-                minWidth: "500px",
-                maxWidth: "600px",
-                //height: "300px",
-                //minHeight: "300px",
-                //maxHeight: "300px",                
-                //position: "center",
-                //responsive: true,
-                //resizable: true,
-                //classes: "",
-                //dialogClass: "mini-dialog",
-                open: function () {
-                    $(this).parent().children().children(".ui-dialog-titlebar-close").hide();
-                    var link = '<a id="dialog-div-close" href="#" style="float:right;text-decoration:none;" class="btn btn-primary" title="Close">X</a>';
-                    // Create Close Button
-                    $(this).parent().find(".ui-dialog-titlebar").append(link);
-                    // Add close event handler to link
-                    $('#dialog-div-close').on('click', function () {
+                buttons: {
+                    Close: function () {
                         modalDialog.dialog('close');
-                        window.location.href = "/Home/Index";
+                        return false;
+                    }
+                },
+                open: function () {
+                    $(this).parent().children().children(".ui-dialog-titlebar-close").hide();                    
+                    var link = '<a id="dialog-div-close" href="javascript:void(0);" style="float:right;text-decoration:none;" class="btn btn-primary" title="Close">X</a>';
+                    $(this).parent().find(".ui-dialog-titlebar").append(link);
+                    $('#dialog-div-close').on('click', function () {
+                        $('.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-resizable').remove();
+                        $('.ui-widget-overlay.ui-front').remove();
                     });
+                    return false;
+                },
+                close: function () {
+                    $('.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-resizable').remove();
+                    $('.ui-widget-overlay.ui-front').remove();
+                    return false;
                 }
             });
 

@@ -17,11 +17,11 @@
     },
 
     togglePassword: function () {
-        $('#txtPassword + .glyphicon').on('click', function () {
-            $("#txtPassword + .glyphicon")
+        $('#txtPassword + .fa').on('click', function () {
+            $("#txtPassword + .fa")
                 .mousedown(function (e) {
-                    $(this).addClass('glyphicon-eye-open');
-                    $(this).removeClass("glyphicon-eye-close");
+                    $(this).addClass('fa-eye-slash');
+                    $(this).removeClass("fa-eye");
                     var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock');
                     var secondElem = $("#txtConfirmPassword").siblings().children('.fa.fa-lock');
 
@@ -38,8 +38,8 @@
                     $("#txtConfirmPassword").attr("type", "text");
                 })
                 .mouseup(function (e) {
-                    $(this).addClass("glyphicon-eye-close");
-                    $(this).removeClass('glyphicon-eye-open');
+                    $(this).addClass("fa-eye");
+                    $(this).removeClass('fa-eye-slash');
                     var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock-open');
                     var secondElem = $("#txtConfirmPassword").siblings().children('.fa.fa-lock-open');
 
@@ -56,8 +56,8 @@
                     $("#txtConfirmPassword").attr("type", "password");
                 })
                 .mouseout(function (e) {
-                    $(this).addClass("glyphicon-eye-close");
-                    $(this).removeClass('glyphicon-eye-open');
+                    $(this).addClass("fa-eye");
+                    $(this).removeClass('fa-eye-slash');
                     var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock-open');
                     var secondElem = $("#txtConfirmPassword").siblings().children('.fa.fa-lock-open');
 
@@ -74,7 +74,7 @@
                     $("#txtConfirmPassword").attr("type", "password");
                 });
         });
-        $('#txtPassword + .glyphicon').click();
+        $('#txtPassword + .fa').click();
     },
 
     validatePhone: function (elem) {
@@ -165,10 +165,10 @@
     },
 
     toggleLogin: function () {
-        $("#txtPassword + .glyphicon")
+        $("#txtPassword + .fa")
             .mousedown(function (e) {
-                $(this).addClass('glyphicon-eye-open');
-                $(this).removeClass("glyphicon-eye-close");
+                $(this).addClass('fa-eye-slash');
+                $(this).removeClass("fa-eye");
                 var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock');
                 $(firstElem).css({ "color": "#ff0000" });
                 $(firstElem).removeClass('fa-lock');
@@ -177,8 +177,8 @@
                 $("#txtConfirmPassword").attr("type", "text");
             })
             .mouseup(function (e) {
-                $(this).addClass("glyphicon-eye-close");
-                $(this).removeClass('glyphicon-eye-open');
+                $(this).addClass("fa-eye");
+                $(this).removeClass('fa-eye-slash');
                 var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock-open');
                 $(firstElem).css({ "color": "#3b5997" });
                 $(firstElem).removeClass('fa-lock-open');
@@ -187,8 +187,8 @@
                 $("#txtConfirmPassword").attr("type", "password");
             })
             .mouseout(function (e) {
-                $(this).addClass("glyphicon-eye-close");
-                $(this).removeClass('glyphicon-eye-open');
+                $(this).addClass("fa-eye");
+                $(this).removeClass('fa-eye-slash');
                 var firstElem = $("#txtPassword").siblings().children('.fa.fa-lock-open');
                 $(firstElem).css({ "color": "#3b5997" });
                 $(firstElem).removeClass('fa-lock-open');

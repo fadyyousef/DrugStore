@@ -1,0 +1,60 @@
+﻿@using DrugStore.ViewModels;
+@model List<UserRoleVM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var isAdmin = User.IsInRole("Admin");
+    var isAdminLite = User.IsInRole("Admin Lite");
+}
+
+<h2>Index - User Roles</h2>
+
+<div class="container">
+    <div class="form-group" style="margin: 0">
+        <div class="row" style="margin: 0; background-color: #ccc;">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                <label class="control-label">User Role Name</label>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <label class="control-label">Actions</label>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" style="margin: 0">
+        @foreach (var item in Model)
+        {
+            <div class="row row-striped">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right" style="word-wrap: break-word;">
+                    @Html.DisplayFor(modelItem => item.UserRoleName, "User Role Name")
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="word-wrap: break-word;">
+                    @if (isAdmin)
+                    {
+                        <div>
+                            @Html.ActionLink(" ", "Details", new { id = item.UserRoleID },
+                                    new { id = item.UserRoleID, @class = "btn btn-info fa fa-info-circle", title = "Details" })
+                        </div>
+                    }
+                    else
+                    {
+                        @Html.Label("Denied Access", new { @class = "control-label" })
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        registerObj.toggleAccordion();
+    });
+</script>
+
+
+
+
+
+

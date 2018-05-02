@@ -12,7 +12,7 @@ namespace DrugStore.Controllers
     public class UsersController : BaseController
     {
         // GET: Users
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Index(string option, string search, int? pageNumber, string sort)
         {
             option = option == null ? "" : option;

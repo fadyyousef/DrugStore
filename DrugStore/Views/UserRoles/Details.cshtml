@@ -1,0 +1,116 @@
+﻿@model DrugStore.ViewModels.UserRoleVM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Details - User Role</h2>
+
+@Html.HiddenFor(model => model.UserRoleID)
+@Html.HiddenFor(mode => Model.CreatedBy)
+@Html.HiddenFor(mode => Model.CreatedDate)
+@Html.HiddenFor(mode => Model.UpdatedBy)
+@Html.HiddenFor(mode => Model.UpdatedDate)
+
+<div class="container">
+    <div class="form-group">
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">&nbsp;</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.LabelFor(model => model.UserRoleName, "User Role", new { @class = "control-label" })
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="input-group" style="cursor: not-allowed;">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-wrench"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.UserRoleName, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.LabelFor(model => model.CreatedDate, "Created Date", new { @class = "control-label" })
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.CreatedDate, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.LabelFor(model => model.CreatedBy, "Created By", new { @class = "control-label" })
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.CreatedBy, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.LabelFor(model => model.UpdatedDate, "Updated Date", new { @class = "control-label" })
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.UpdatedDate, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-striped">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right">
+                @Html.LabelFor(model => model.UpdatedBy, "Updated By", new { @class = "control-label" })
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
+                <div class="input-group">
+                    <span class="input-group-addon" style="width: 40px;">
+                        <i style="color: #3b5997" class="fa fa-calendar"></i>
+                    </span>
+                    @Html.TextBoxFor(model => model.UpdatedBy, new { @class = "form-control", @readonly = "readonly" })
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="row row-striped">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
+                @Html.ActionLink("Index", "Index", null, new { @class = "btn btn-danger btn-unified" })
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                &nbsp;
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        registerObj.validatePassword();
+        registerObj.togglePassword();
+        registerObj.validatePhone("txtPhone");
+    });
+</script>

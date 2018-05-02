@@ -104,7 +104,7 @@ namespace DrugStore.Controllers
                     {
                         FormsAuthentication.SetAuthCookie(user.UserName, true);
                         HttpContext.Cache.Insert("User", user, null, DateTime.Now.AddDays(1), Cache.NoSlidingExpiration);
-                        var isValid = Membership.ValidateUser(user.UserName, encrypted_password);
+                        var isValid = Membership.ValidateUser(user.Email, encrypted_password);
                         return RedirectToAction("Index", "Home");
                     }
                     else
@@ -187,7 +187,7 @@ namespace DrugStore.Controllers
         #endregion
 
         #region Profile
-        [CustomAuthorize(Roles = CustomRoles.AdminOrUser)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite_User)]
         public ActionResult EditProfile(int? id)
         {
             if (Request.IsAuthenticated == false)
@@ -226,7 +226,7 @@ namespace DrugStore.Controllers
             }
         }
 
-        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.AdminOrUser)]
+        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite_User)]
         public ActionResult EditProfile(UserVM vm)
         {
             if (ModelState.IsValid)

@@ -9,7 +9,7 @@ namespace DrugStore.Controllers
     public class EmailsController : BaseController
     {
         // GET: Users
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Index(string option, string search, int? pageNumber, string sort)
         {
             option = option == null ? "" : option;
@@ -55,7 +55,7 @@ namespace DrugStore.Controllers
                         emails = emails.OrderBy(x => x.EmailSubject);
                         break;
                     default:
-                        emails = emails.OrderBy(x => x.EmailTo);
+                        emails = emails.OrderByDescending(x => x.CreatedDate);
                         break;
                 }
 

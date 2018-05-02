@@ -17,7 +17,10 @@
     @Styles.Render("~/Content/themes/base/jquery-ui.css")
     @Styles.Render("~/Content/fontawesome")
 
-    @{var isAdmin = User.IsInRole("Admin"); }
+    @{
+        var isAdmin = User.IsInRole("Admin");
+        var isAdminLite = User.IsInRole("Admin Lite");
+    }
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,7 +38,7 @@
             <div class="navbar-collapse collapse">
                 @if (Request.IsAuthenticated)
                 {
-                    if (isAdmin)
+                    if (isAdmin || isAdminLite)
                     {
                         @Html.Partial("~/Views/Shared/_PartialMenu.cshtml")
                     }
@@ -83,9 +86,6 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <div id="modal-container" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-content"></div>
-        </div>
         <style>
             .modal-content {
                 position: absolute;

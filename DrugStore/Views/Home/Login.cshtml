@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-left">
                             <div class="input-group">
-                                <span class="input-group-addon"><i style="color: #3b5997" class="glyphicon glyphicon-wrench"></i></span>
+                                <span class="input-group-addon"><i style="color: #3b5997" class="fa fa-wrench"></i></span>
                                 @Html.TextBoxFor(a => a.UserName, new { @class = "form-control" })
                             </div>
                             @Html.ValidationMessageFor(a => a.UserName, "", new { @class = "control-label text-danger" })
@@ -47,7 +47,7 @@
                                            type = "password",
                                            name = "password"
                                        })
-                                <span style="color: #3b5997; display: inline-block; z-index: 999" class="glyphicon glyphicon-eye-close glyph"></span>
+                                <span style="color: #3b5997; display: inline-block; z-index: 999" class="fa fa-eye glyph"></span>
                                 @Html.ValidationMessageFor(a => a.Password, "", new { @class = "text-danger" })
                             </div>
                         </div>

@@ -30,16 +30,21 @@ namespace DrugStore.Controllers
             var hasPassed = false;
             if (User.Identity.IsAuthenticated)
             {
-                var _user = Membership.GetUser(HttpContext.User.Identity.Name, false);
-                var userId = (int)_user.ProviderUserKey;
-                var user = _unitOfWork.UserRepository.GetUserById(userId);
+                MembershipUser _user = Membership.GetUser(HttpContext.User.Identity.Name, false);
+                int userId = (int)_user.ProviderUserKey;
+                User user = _unitOfWork.UserRepository.GetUserById(userId);
                 Session["FirstName"] = user.FirstName;
-                var userRole = user.UserRole.UserRoleName.ToLower();
-                if (userRole == "admin" || userRole == "user")
+                string userRole = user.UserRole.UserRoleName.ToLower();
+                List<UserRole> userRoles = _unitOfWork.UserRepository.GetAllRoles().ToList();
+                if (userRoles.Any(a => a.UserRoleName.ToLower() == userRole))
                 {
                     if (userRole == "admin")
                     {
                         Roles.AddUserToRole(user.UserName, "Admin");
+                    }
+                    if (userRole == "admin lite")
+                    {
+                        Roles.AddUserToRole(user.UserName, "AdminLite");
                     }
                     if (userRole == "user")
                     {
@@ -528,6 +533,59 @@ namespace DrugStore.Controllers
             var userId = (int)_user.ProviderUserKey;
             var user = _unitOfWork.UserRepository.GetUserById(userId);
             return user.FullName;
+        }
+
+        #endregion
+
+        #region UserRoles
+        public IEnumerable<UserRoleVM> GetAllUserRoleVMs()
+        {
+            var userRoles = _unitOfWork.UserRepository.GetAllRoles();
+            var userRoleVM = new UserRoleVM();
+            var userRoleVMs = new List<UserRoleVM>();
+            foreach (var userRole in userRoles)
+            {
+                userRoleVM = CreateUserRoleViewModel(userRole);
+                userRoleVMs.Add(userRoleVM);
+            }
+            return userRoleVMs != null ? userRoleVMs : new List<UserRoleVM>();
+        }
+
+        public IEnumerable<UserRole> GetAllUserRoles()
+        {
+            var userRoles = _unitOfWork.UserRepository.GetAllRoles();
+            return userRoles != null ? userRoles : new List<UserRole>();
+        }
+
+        public UserRoleVM CreateUserRoleViewModel(UserRole userRole)
+        {
+            var userRoles = _unitOfWork.UserRepository.GetAllRoles();
+            if (userRole.UserRoleID != default(int))
+            {
+                ViewBag.UserRole = _unitOfWork.UserRepository.getUserRole(userRole.UserRoleID);
+                var userRoleVM = new UserRoleVM()
+                {
+                    UserRoleID = userRole.UserRoleID,
+                    UserRoleName = userRole.UserRoleName,
+                    CreatedBy = userRole.CreatedBy == null ? GetLoggenInUser() : userRole.CreatedBy,
+                    CreatedDate = userRole.CreatedDate,
+                    UpdatedBy = userRole.UpdatedBy,
+                    UpdatedDate = userRole.UpdatedDate
+                };
+                return userRoleVM;
+            }
+            else
+            {
+                var userRoleVM = new UserRoleVM()
+                {
+                    UserRoleName = userRole.UserRoleName,
+                    CreatedBy = GetLoggenInUser(),
+                    CreatedDate = userRole.CreatedDate,
+                    UpdatedBy = GetLoggenInUser(),
+                    UpdatedDate = userRole.UpdatedDate
+                };
+                return userRoleVM;
+            }
         }
 
         #endregion

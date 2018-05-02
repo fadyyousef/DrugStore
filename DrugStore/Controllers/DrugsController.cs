@@ -13,7 +13,7 @@ namespace DrugStore.Controllers
     public class DrugsController : BaseController
     {
         // GET: Drugs
-        [CustomAuthorize(Roles = CustomRoles.AdminOrUser)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Index(string option, string search, int? pageNumber, string sort)
         {
             option = option == null ? "" : option;
@@ -73,7 +73,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: Drugs/Details/5
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite_User)]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -90,7 +90,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: Drugs/Create
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Create()
         {
             var drugVM = new DrugVM();
@@ -101,7 +101,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: Drugs/Create
-        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Create(DrugVM drugVM)
         {
             if (ModelState.IsValid)
@@ -116,7 +116,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: Drugs/Edit/5
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -134,7 +134,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: Drugs/Edit/5
-        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Edit(DrugVM drugVM)
         {
             if (ModelState.IsValid)
@@ -152,7 +152,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: Drugs/Delete/5
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -170,7 +170,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: Drugs/Delete/5
-        [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult DeleteConfirmed(int id)
         {
             if (id == 0)

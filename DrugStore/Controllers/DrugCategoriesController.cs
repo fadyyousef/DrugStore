@@ -12,7 +12,7 @@ namespace DrugStore.Controllers
     public class DrugCategoriesController : BaseController
     {
         // GET: DrugCategories
-        [CustomAuthorize(Roles = CustomRoles.AdminOrUser)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Index(string search, int? pageNumber, string sort)
         {
             search = search == null ? "" : search.ToLower();
@@ -46,7 +46,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: DrugCategories/Details/5
-        [CustomAuthorize(Roles = CustomRoles.AdminOrUser)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite_User)]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -62,7 +62,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: DrugCategories/Create
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Create()
         {
             var drugCategoryVM = new DrugCategoryVM();
@@ -70,7 +70,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: DrugCategories/Create
-        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Create(DrugCategoryVM drugCategoryVM)
         {
             if (ModelState.IsValid)
@@ -82,7 +82,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: DrugCategories/Edit/5
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,7 +98,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: DrugCategories/Edit/5
-        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Edit(DrugCategoryVM drugCategoryVM)
         {
             if (ModelState.IsValid)
@@ -110,7 +110,7 @@ namespace DrugStore.Controllers
         }
 
         // GET: DrugCategories/Delete/5
-        [CustomAuthorize(Roles = CustomRoles.Admin)]
+        [CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -126,7 +126,7 @@ namespace DrugStore.Controllers
         }
 
         // POST: DrugCategories/Delete/5
-        [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin)]
+        [HttpPost, ActionName("Delete"), ValidateAntiForgeryToken, CustomAuthorize(Roles = CustomRoles.Admin_AdminLite)]
         public ActionResult DeleteConfirmed(int id)
         {
             DeleteDrugCategory(id);

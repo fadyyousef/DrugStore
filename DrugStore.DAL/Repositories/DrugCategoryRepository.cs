@@ -11,80 +11,80 @@ namespace DrugStore.DAL.Repositories
     {
         private readonly DrugContext _context;
 
-        public DrugCategoryRepository( )
+        public DrugCategoryRepository()
         {
-            if ( _context == null )
+            if (_context == null)
             {
-                _context = new DrugContext( );
+                _context = new DrugContext();
             }
         }
 
-        public DrugCategoryRepository( DrugContext context )
+        public DrugCategoryRepository(DrugContext context)
         {
-            if ( _context == null )
+            if (_context == null)
             {
                 _context = context;
             }
         }
 
-        public IEnumerable<DrugCategory> GetAllDrugCategories( )
+        public IEnumerable<DrugCategory> GetAllDrugCategories()
         {
-            return _context.DrugCategory.ToList( );
+            return _context.DrugCategory.ToList();
         }
 
-        public DrugCategory GetDrugCategoryById( int Id )
+        public DrugCategory GetDrugCategoryById(int Id)
         {
-            return _context.DrugCategory.Find( Id );
+            return _context.DrugCategory.Find(Id);
         }
 
-        public int AddDrugCategory( DrugCategory drugCategoryEntity )
+        public int AddDrugCategory(DrugCategory drugCategoryEntity)
         {
             int result = -1;
-            if ( drugCategoryEntity != null )
+            if (drugCategoryEntity != null)
             {
-                _context.DrugCategory.Add( drugCategoryEntity );
-                _context.SaveChanges( );
+                _context.DrugCategory.Add(drugCategoryEntity);
+                _context.SaveChanges();
                 result = drugCategoryEntity.CategoryID;
             }
             return result;
         }
 
-        public int UpdateDrugCategory( DrugCategory drugCategoryEntity )
+        public int UpdateDrugCategory(DrugCategory drugCategoryEntity)
         {
             int result = -1;
-            if ( drugCategoryEntity != null )
+            if (drugCategoryEntity != null)
             {
-                _context.Entry( drugCategoryEntity ).State = EntityState.Modified;
-                _context.SaveChanges( );
+                _context.Entry(drugCategoryEntity).State = EntityState.Modified;
+                _context.SaveChanges();
                 result = drugCategoryEntity.CategoryID;
             }
             return result;
         }
 
-        public void DeleteDrugCategory( int Id )
+        public void DeleteDrugCategory(int Id)
         {
-            DrugCategory drugCategoryEntity = _context.DrugCategory.Find( Id );
-            _context.DrugCategory.Remove( drugCategoryEntity );
-            _context.SaveChanges( );
+            DrugCategory drugCategoryEntity = _context.DrugCategory.Find(Id);
+            _context.DrugCategory.Remove(drugCategoryEntity);
+            _context.SaveChanges();
         }
 
         #region Dispose
         private bool disposed = false;
-        protected virtual void Dispose( bool disposing )
+        protected virtual void Dispose(bool disposing)
         {
-            if ( !this.disposed )
+            if (!this.disposed)
             {
-                if ( disposing )
+                if (disposing)
                 {
-                    _context.Dispose( );
+                    _context.Dispose();
                 }
             }
             this.disposed = true;
         }
-        public void Dispose( )
+        public void Dispose()
         {
-            Dispose( true );
-            GC.SuppressFinalize( this );
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
         #endregion
     }

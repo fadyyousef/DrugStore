@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace DrugStore.Helpers
@@ -10,8 +6,12 @@ namespace DrugStore.Helpers
     public static class CustomRoles
     {
         public const string Admin = "Admin";
+        public const string AdminLite = "Admin Lite";
         public const string User = "User";
-        public const string AdminOrUser = Admin + "," + User;
+        public const string Admin_AdminLite_User = Admin + "," + AdminLite + "," + User;
+        public const string Admin_AdminLite = Admin + "," + AdminLite;
+        public const string AdminLite_User = AdminLite + "," + User;
+        public const string Admin_User = Admin + "," + User;
     }
 
     public class CustomAuthorize : AuthorizeAttribute
